@@ -46,9 +46,9 @@
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
 //            | L2 | BKSPC | SPC |   | TAB | ENTR | ESC |
                         bindings = <
-    &kp Q          &kp W          &kp E            &kp R       &kp T       &kp Y &kp U       &kp I             &kp O           &kp P
-    &hm LEFT_GUI A &hm LEFT_ALT S &hm LEFT_SHIFT D &hm LCTRL F &kp G       &kp H &hm RCTRL J &hm RIGHT_SHIFT K &hm RIGHT_ALT L &hm RIGHT_GUI SEMI
-    &lt 1 Z        &kp X          &kp C            &kp V       &kp B       &kp N &kp M       &kp COMMA         &kp DOT         &lt 1 FSLH
+    &kp O &kp Q          &kp W          &kp E            &kp R       &kp T       &kp Y &kp U       &kp I             &kp O           &kp P                &kp O
+    &kp O &hm LEFT_GUI A &hm LEFT_ALT S &hm LEFT_SHIFT D &hm LCTRL F &kp G       &kp H &hm RCTRL J &hm RIGHT_SHIFT K &hm RIGHT_ALT L &hm RIGHT_GUI SEMI   &kp O
+    &kp O &lt 1 Z        &kp X          &kp C            &kp V       &kp B       &kp N &kp M       &kp COMMA         &kp DOT         &lt 1 FSLH           &kp O
                   &mo_tog 2 2 &kp BACKSPACE &kp SPACE   &kp TAB &kp ENTER &kp ESC
                         >;
                 };
@@ -59,9 +59,9 @@
 // |        |     |  [  |  ]  |  `  |    |  0  |  1  |  2  |  3  |          |
 //             |     |     |     |    |     |     |     |
                         bindings = <
-   &kp C_BRI_UP    &trans   &kp LBRC   &kp RBRC   &trans          &kp NUBS    &kp N7   &kp N8    &kp N9   &kp K_VOL_UP
-   &kp C_BRI_DN    &trans   &kp LPAR   &kp RPAR   &kp EQUAL       &kp MINUS   &kp N4   &kp N5    &kp N6   &kp K_VOL_DN
-   &trans          &trans   &kp LBKT   &kp RBKT   &kp GRAVE       &kp N0      &kp N1   &kp N2    &kp N3   &trans
+   &kp O &kp C_BRI_UP    &trans   &kp LBRC   &kp RBRC   &trans          &kp NUBS    &kp N7   &kp N8    &kp N9   &kp K_VOL_UP &kp O
+   &kp O &kp C_BRI_DN    &trans   &kp LPAR   &kp RPAR   &kp EQUAL       &kp MINUS   &kp N4   &kp N5    &kp N6   &kp K_VOL_DN &kp O
+   &kp O &trans          &trans   &kp LBKT   &kp RBKT   &kp GRAVE       &kp N0      &kp N1   &kp N2    &kp N3   &trans       &kp O
                 &trans     &trans       &trans        &trans     &trans   &trans
                         >;
                 };
@@ -73,9 +73,9 @@
 // |           |      |      | BT_CLR | BT2 |   | F11 | F12 | Back | Fwd |     |
 //             |     |     |     |   | Pause |     |     |
                         bindings = <
-   &kp PG_UP   &trans     &kp UP     &trans      &bt BT_SEL 0      &kp F1   &kp F2   &kp F3      &kp F4     &kp F5
-   &kp PG_DN   &kp LEFT   &kp DOWN   &kp RIGHT   &bt BT_SEL 1      &kp F6   &kp F7   &kp F8      &kp F9     &kp F10
-   &trans      &trans     &trans     &bt BT_CLR  &bt BT_SEL 2      &kp F11  &kp F12  &kp K_PREV  &kp K_NEXT &trans
+   &kp O &kp PG_UP   &trans     &kp UP     &trans      &bt BT_SEL 0      &kp F1   &kp F2   &kp F3      &kp F4     &kp F5   &kp O
+   &pk O &kp PG_DN   &kp LEFT   &kp DOWN   &kp RIGHT   &bt BT_SEL 1      &kp F6   &kp F7   &kp F8      &kp F9     &kp F10  &kp O
+   &pk O &trans      &trans     &trans     &bt BT_CLR  &bt BT_SEL 2      &kp F11  &kp F12  &kp K_PREV  &kp K_NEXT &trans   &kp O
                              &trans  &trans  &trans   &kp K_PP  &trans    &trans
                         >;
                 };
