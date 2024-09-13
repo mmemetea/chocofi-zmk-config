@@ -44,13 +44,13 @@
 // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
 // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
 // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
-//            | L2 | BKSPC | SPC |   | TAB | ENTR | ESC |
+//            | L2 | SPC  | BKSPC |   | TAB | ENTR | ESC |
                         display-name = "QWERTY";
                         bindings = <
     &kp O &kp Q          &kp W          &kp E            &kp R       &kp T       &kp Y &kp U       &kp I             &kp O           &kp P                &kp O
     &kp O &hm LEFT_GUI A &hm LEFT_ALT S &hm LEFT_SHIFT D &hm LCTRL F &kp G       &kp H &hm RCTRL J &hm RIGHT_SHIFT K &hm RIGHT_ALT L &hm RIGHT_GUI SEMI   &kp O
     &kp O &lt 1 Z        &kp X          &kp C            &kp V       &kp B       &kp N &kp M       &kp COMMA         &kp DOT         &lt 1 FSLH           &kp O
-                  &mo_tog 2 2 &kp BACKSPACE &kp SPACE   &kp TAB &kp ENTER &kp ESC
+                  &mo_tog 2 2 &kp SPACE &kp BACKSPACE   &kp TAB &kp ENTER &kp ESC
                         >;
                 };
                 num_sym_layer {
