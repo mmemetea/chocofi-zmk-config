@@ -50,9 +50,9 @@
 
             display-name = "QWERTY";
             bindings = <
-&kp O  &kp Q           &kp W           &kp E             &kp R        &kp T            &kp Y    &kp U        &kp I              &kp O            &kp P               &kp O
-&kp O  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_SHIFT D  &hm LCTRL F  &kp G            &kp H    &hm RCTRL J  &hm RIGHT_SHIFT K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI  &kp O
-&kp O  &lt 1 Z         &kp X           &kp C             &kp V        &kp B            &kp N    &kp M        &kp COMMA          &kp DOT          &lt 1 FSLH          &kp O
+&none  &kp Q           &kp W           &kp E             &kp R        &kp T            &kp Y    &kp U        &kp I              &kp O            &kp P               &none
+&none  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_SHIFT D  &hm LCTRL F  &kp G            &kp H    &hm RCTRL J  &hm RIGHT_SHIFT K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI  &none
+&none  &lt 1 Z         &kp X           &kp C             &kp V        &kp B            &kp N    &kp M        &kp COMMA          &kp DOT          &lt 1 FSLH          &none
                                        &mo_tog 2 2       &kp SPACE    &kp BACKSPACE    &kp TAB  &kp ENTER    &kp ESC
             >;
         };
@@ -66,10 +66,10 @@
 
             display-name = "NUM/SYM";
             bindings = <
-&kp O  &kp C_BRI_UP           &kp STAR           &kp LBRC             &kp RBRC        &kp SINGLE_QUOTE    &kp BACKSLASH  &kp N7        &kp N8              &kp N9            &kp K_VOL_UP            &kp O
-&kp O  &hm LEFT_GUI C_BRI_DN  &hm LEFT_ALT FSLH  &hm LEFT_SHIFT LPAR  &hm LCTRL RPAR  &kp EQUAL           &kp MINUS      &hm RCTRL N4  &hm RIGHT_SHIFT N5  &hm RIGHT_ALT N6  &hm RIGHT_GUI K_VOL_DN  &kp O
-&kp O  &trans                 &trans             &kp LBKT             &kp RBKT        &kp GRAVE           &kp N0         &kp N1        &kp N2              &kp N3            &trans                  &kp O
-                                                 &trans               &trans          &trans              &trans         &trans        &trans
+&none  &kp C_BRI_UP           &kp STAR           &kp LBRC             &kp RBRC        &kp SINGLE_QUOTE    &kp BACKSLASH  &kp N7        &kp N8              &kp N9            &kp K_VOL_UP            &none
+&none  &hm LEFT_GUI C_BRI_DN  &hm LEFT_ALT FSLH  &hm LEFT_SHIFT LPAR  &hm LCTRL RPAR  &kp EQUAL           &kp MINUS      &hm RCTRL N4  &hm RIGHT_SHIFT N5  &hm RIGHT_ALT N6  &hm RIGHT_GUI K_VOL_DN  &none
+&none  &trans                 &trans             &kp LBKT             &kp RBKT        &kp GRAVE           &kp N0         &kp N1        &kp N2              &kp N3            &trans                  &none
+                                                 &trans               &trans          &kp DEL             &trans         &trans        &trans
             >;
         };
 
@@ -82,9 +82,9 @@
 
             display-name = "NAV";
             bindings = <
-&kp O  &kp F1       &kp F2       &kp F3             &kp F4               &kp F5        &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp O
-&kp O  &hm LGUI F6  &hm LALT F7  &hm LEFT_SHIFT F8  &hm LEFT_CONTROL F9  &kp F10       &kp LEFT_ARROW  &kp DOWN      &kp UP_ARROW  &kp RIGHT     &trans        &kp O
-&kp O  &kp F11      &kp F12      &trans             &trans               &bt BT_CLR    &trans          &trans        &kp K_PREV    &kp K_NEXT    &trans        &kp O
+&none  &kp F1       &kp F2       &kp F3             &kp F4               &kp F5        &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
+&none  &hm LGUI F6  &hm LALT F7  &hm LEFT_SHIFT F8  &hm LEFT_CONTROL F9  &kp F10       &kp LEFT_ARROW  &kp DOWN      &kp UP_ARROW  &kp RIGHT     &trans        &none
+&none  &kp F11      &kp F12      &trans             &trans               &bt BT_CLR    &trans          &trans        &kp K_PREV    &kp K_NEXT    &trans        &none
                                  &trans             &trans               &trans        &kp K_PP        &trans        &trans
             >;
         };
