@@ -82,10 +82,10 @@
 
             display-name = "NAV";
             bindings = <
-&none  &kp F1       &kp F2       &kp F3             &kp F4               &kp F5        &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
-&none  &hm LGUI F6  &hm LALT F7  &hm LEFT_SHIFT F8  &hm LEFT_CONTROL F9  &kp F10       &kp LEFT_ARROW  &kp DOWN      &kp UP_ARROW  &kp RIGHT     &trans        &none
-&none  &kp F11      &kp F12      &trans             &trans               &bt BT_CLR    &trans          &trans        &kp K_PREV    &kp K_NEXT    &trans        &none
-                                 &trans             &trans               &trans        &kp K_PP        &trans        &trans
+&none  &kp F1       &kp F2       &kp F3             &kp F4               &kp F5        &kp HOME        &kp PG_DN  &kp PG_UP     &kp END     &trans  &none
+&none  &hm LGUI F6  &hm LALT F7  &hm LEFT_SHIFT F8  &hm LEFT_CONTROL F9  &kp F10       &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp RIGHT   &trans  &none
+&none  &kp F11      &kp F12      &bt BT_PRV         &bt BT_NXT           &bt BT_CLR    &trans          &trans     &kp K_PREV    &kp K_NEXT  &trans  &none
+                                 &trans             &trans               &trans        &kp K_PP        &trans     &trans
             >;
         };
     };
