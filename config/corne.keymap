@@ -10,104 +10,301 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+	macros {
+		/* Macro to select Bluetooth device 0 */
+		u_macro_u_bt_sel_0: u_macro_u_bt_sel_0 {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <0>;
+			bindings = <&bt BT_SEL 0 &bt BT_CLR>;
+		};	
 
-            quick-tap-ms = <200>;
-        };
+		/* Macro to select Bluetooth device 1 */
+		u_macro_u_bt_sel_1: u_macro_u_bt_sel_1 {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <0>;
+			bindings = <&bt BT_SEL 1 &bt BT_CLR>;
+		};	
 
-        mo_tog: behavior_mo_tog {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&tog>;
-        };
+		/* Macro to select Bluetooth device 2 */
+		u_macro_u_bt_sel_2: u_macro_u_bt_sel_2 {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <0>;
+			bindings = <&bt BT_SEL 2 &bt BT_CLR>;
+		};	
 
-        mo_trans: hold_or_transparent {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&trans>;
-        };
-    };
+		/* Macro to select Bluetooth device 3 */
+		u_macro_u_bt_sel_3: u_macro_u_bt_sel_3 {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <0>;
+			bindings = <&bt BT_SEL 3 &bt BT_CLR>;
+		};	
 
-    keymap {
-        compatible = "zmk,keymap";
+		/* Macro to select Bluetooth device 4 */
+		u_macro_u_bt_sel_4: u_macro_u_bt_sel_4 {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <0>;
+			bindings = <&bt BT_SEL 4 &bt BT_CLR>;
+		};
+	};
+};
 
-        default_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
-            // |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
-            // |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
-            //            | L2 | SPC  | BKSPC |   | TAB | ENTR | ESC |
+/ {
+	behaviors {
+		/* Behavior to toggle Bluetooth device 0 */
+		u_bt_sel_0: u_bt_sel_0 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&bt BT_SEL 0>, <&u_macro_u_bt_sel_0>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
 
-            display-name = "QWERTY";
-            bindings = <
-&none  &kp Q           &kp W           &kp E             &kp R        &kp T            &kp Y    &kp U        &kp I              &kp O            &kp P               &none
-&none  &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_SHIFT D  &hm LCTRL F  &kp G            &kp H    &hm RCTRL J  &hm RIGHT_SHIFT K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI  &none
-&none  &lt 1 Z         &kp X           &kp C             &kp V        &kp B            &kp N    &kp M        &kp COMMA          &kp DOT          &lt 1 FSLH          &none
-                                       &mo 2             &kp SPACE    &kp BACKSPACE    &kp TAB  &kp ENTER    &kp ESC
-            >;
-        };
+		/* Behavior to toggle Bluetooth device 1 */
+		u_bt_sel_1: u_bt_sel_1 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&bt BT_SEL 1>, <&u_macro_u_bt_sel_1>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
 
-        num_sym_layer {
-            // -----------------------------------------------------------------------------------------
-            // | Bright |  *  |  {  |  }  |  '  |    |  \  |  7  |  8  |  9  | Vol Up   |
-            // | Dim    |  /  |  (  |  )  |  =  |    |  -  |  4  |  5  |  6  | Vol Down |
-            // |        |  ^  |  [  |  ]  |  `  |    |  0  |  1  |  2  |  3  |          |
-            //             |     |     |     |    |     |     |     |
+		/* Behavior to toggle Bluetooth device 2 */
+		u_bt_sel_2: u_bt_sel_2 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&bt BT_SEL 2>, <&u_macro_u_bt_sel_2>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
 
-            display-name = "NUM/SYM";
-            bindings = <
-&none  &kp C_BRI_UP           &kp STAR           &kp LBRC             &kp RBRC        &kp SINGLE_QUOTE    &kp BACKSLASH  &kp N7        &kp N8              &kp N9            &kp K_VOL_UP            &none
-&none  &hm LEFT_GUI C_BRI_DN  &hm LEFT_ALT FSLH  &hm LEFT_SHIFT LPAR  &hm LCTRL RPAR  &kp EQUAL           &kp MINUS      &hm RCTRL N4  &hm RIGHT_SHIFT N5  &hm RIGHT_ALT N6  &hm RIGHT_GUI K_VOL_DN  &none
-&none  &trans                 &trans             &kp LBKT             &kp RBKT        &kp GRAVE           &kp N0         &kp N1        &kp N2              &kp N3            &trans                  &none
-                                                 &trans               &trans          &kp DEL             &trans         &trans        &trans
-            >;
-        };
+		/* Behavior to toggle Bluetooth device 3 */
+		u_bt_sel_3: u_bt_sel_3 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&bt BT_SEL 3>, <&u_macro_u_bt_sel_3>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
 
-        nav_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  Pg Up    |      |  UP  |        | BT0 |   | F1  | F2  | F3   | F4  | F5  |
-            // |  Pg Down  | LEFT | DOWN | RIGHT  | BT1 |   | F6  | F7  | F8   | F9  | F10 |
-            // |           |      |      | BT_CLR | BT2 |   | F11 | F12 | Back | Fwd |     |
-            //             |     |     |     |   | Pause |     |     |
+		/* Behavior to toggle Bluetooth device 4 */
+		u_bt_sel_4: u_bt_sel_4 {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&bt BT_SEL 4>, <&u_macro_u_bt_sel_4>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
 
-            display-name = "NAV";
-            bindings = <
-&none  &kp F1       &kp F2       &kp F3             &kp F4               &kp F5     &kp HOME        &kp PG_DN  &kp PG_UP     &kp END     &trans  &none
-&none  &hm LGUI F6  &hm LALT F7  &hm LEFT_SHIFT F8  &hm LEFT_CONTROL F9  &kp F10    &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp RIGHT   &trans  &none
-&none  &kp F11      &kp F12      &trans             &trans               &trans     &trans          &trans     &kp K_PREV    &kp K_NEXT  &trans  &none
-                                 &trans             &trans               &trans     &kp K_PP        &trans     &trans
-            >;
-        };
+		/* Behavior to toggle output */
+		u_out_tog: u_out_tog {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&out OUT_TOG>, <&out OUT_USB>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
 
-        bluetooth {
-            bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &out OUT_TOG  &bt BT_PRV    &bt BT_NXT    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &bt BT_CLR      &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans        &trans        &trans          &trans  &trans  &trans
-            >;
+		/* Behavior to toggle Caps Lock word */
+		u_caps_word: u_caps_word {
+			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
+			bindings = <&caps_word>, <&kp CAPS>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
 
-            label = "BT";
-        };
-    };
+		/* Behavior to tap-dance to Base layer */
+		u_to_U_BASE: u_to_U_BASE {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&trans>, <&to 0>;
+		};
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
+		/* Behavior to tap-dance to Extra layer */
+		u_to_U_EXTRA: u_to_U_EXTRA {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&trans>, <&to 1>;
+		};
 
-        DoubleLayer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+		/* Behavior to tap-dance to Tap layer */
+		u_to_U_TAP: u_to_U_TAP {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&trans>, <&to 2>;
+		};
+
+		/* Behavior to tap-dance to Button layer */
+		u_to_U_BUTTON: u_to_U_BUTTON {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&trans>, <&to 3>;
+		};
+
+		/* Behavior to tap-dance to Navigation layer */
+		u_to_U_NAV: u_to_U_NAV {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&trans>, <&to 4>;
+		};
+
+		/* Behavior to tap-dance to Mouse layer */
+		u_to_U_MOUSE: u_to_U_MOUSE {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&trans>, <&to 5>;
+		};
+
+		/* Behavior to tap-dance to Media layer */
+		u_to_U_MEDIA: u_to_U_MEDIA {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&trans>, <&to 6>;
+		};
+
+		/* Behavior to tap-dance to Number layer */
+		u_to_U_NUM: u_to_U_NUM {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&trans>, <&to 7>;
+		};
+
+		/* Behavior to tap-dance to Symbol layer */
+		u_to_U_SYM: u_to_U_SYM {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&trans>, <&to 8>;
+		};
+
+		/* Behavior to tap-dance to Function layer */
+		u_to_U_FUN: u_to_U_FUN {
+			compatible = "zmk,behavior-tap-dance";
+			#binding-cells = <0>;
+			tapping-term-ms = <200>;
+			bindings = <&trans>, <&to 9>;
+		};
+	};
+};
+
+/ {
+	keymap {
+		compatible = "zmk,keymap";
+
+	/* Base layer */
+	BASE {
+		display-name = "Base";
+			bindings = <
+			&trans			&kp Q  			&kp W  			&kp F  			&kp P  			&kp B       		&kp J  			&kp L  			&kp U  			&kp Y  			&kp SQT  		&trans
+			&trans  		&u_mt LGUI A  		&u_mt LALT R  		&u_mt LCTRL S  		&u_mt LSHFT T  		&kp G       		&kp M  			&u_mt LSHFT N  		&u_mt LCTRL E  		&u_mt LALT I  		&u_mt LGUI O  		&trans
+			&trans  		&u_lt 3 Z  		&u_mt RALT X  		&kp C  			&kp D  			&kp V       		&kp K  			&kp H  			&kp COMMA  		&u_mt RALT DOT  	&u_lt 3 SLASH  		&trans
+												&u_lt 6 ESC  		&u_lt 4 SPACE  		&u_lt 5 TAB    		&u_lt 8 RET  		&u_lt 7 BSPC  		&u_lt 9 DEL
+			>;
+		};
+
+	/* Extra layer */
+	EXTRA {
+		display-name = "Extra";
+			bindings = <
+			&trans 			&kp Q  			&kp W  			&kp E  			&kp R  			&kp T       		&kp Y  			&kp U  			&kp I  			&kp O  			&kp P  			&trans
+			&trans 			&u_mt LGUI A  		&u_mt LALT S  		&u_mt LCTRL D  		&u_mt LSHFT F  		&kp G       		&kp H  			&u_mt LSHFT J  		&u_mt LCTRL K  		&u_mt LALT L  		&u_mt LGUI SQT  	&trans
+			&trans 			&u_lt 3 Z  		&u_mt RALT X  		&kp C  			&kp V  			&kp B    		&kp N  			&kp M  			&kp COMMA  		&u_mt RALT DOT  	&u_lt 3 SLASH  		&trans
+												&u_lt 6	ESC  		&u_lt 4 SPACE  		&u_lt 5 TAB     	&u_lt 8 RET  		&u_lt 7 BSPC  		&u_lt 9 DEL
+			>;
+		};
+
+	/* Tap layer */
+	TAP {
+		display-name   = "Tap";
+		bindings = <
+			&trans  		&kp Q  			&kp W  			&kp F  			&kp P        		&kp B       		&kp J  			&kp L  			&kp U  			&kp Y  			&kp SQT  		&trans
+			&trans			&kp A  			&kp R  			&kp S  			&kp T			&kp G       		&kp M  			&kp N  			&kp E  			&kp I  			&kp O  			&trans
+			&trans			&kp Z  			&kp X  			&kp C  			&kp D			&kp V       		&kp K  			&kp H  			&kp COMMA  		&kp DOT  		&kp SLASH  		&trans
+												&kp ESC  		&kp SPACE  		&kp TAB       		&kp RET  		&kp BSPC  		&kp DEL
+			>;
+		};
+
+	/* Button layer */
+	BUTTON {
+		display-name   = "Button";
+		bindings = <
+			&trans			&kp LG(Z)  		&kp LG(X)  		&kp LG(C)		&kp LG(V)  		&kp LS(LG(Z))		&kp LS(LG(Z))  		&kp LG(V)  		&kp LG(C)  		&kp LG(X)  		&kp LG(Z)  		&trans
+			&trans  		&kp LGUI  		&kp LALT  		&kp LCTRL  		&kp LSHFT  		&trans       		&trans  		&kp LSHFT  		&kp LCTRL  		&kp LALT  		&kp LGUI  		&trans
+			&trans  		&kp LG(Z)  		&kp LG(X)  		&kp LG(C)  		&kp LG(V)  		&kp LS(LG(Z))   	&kp LS(LG(Z))  		&kp LG(V)  		&kp LG(C)  		&kp LG(X)  		&kp LG(Z)  		&trans
+												&mkp MB3  		&mkp MB1  		&mkp MB2       		&mkp MB2  		&mkp MB1  		&mkp MB3
+			>;
+		};
+
+	/* Navigation layer */
+	NAV {
+		display-name   = "Nav";
+		bindings = <
+			&trans  		&bootloader  		&u_to_U_TAP  		&u_to_U_EXTRA  		&u_to_U_BASE  		&studio_unlock		&kp LS(LG(Z))  		&kp LG(V)  		&kp LG(C)  		&kp LG(X)  		&kp LG(Z)  		&trans
+			&trans  		&kp LGUI  		&kp LALT  		&kp LCTRL  		&kp LSHFT  		&trans       		&u_caps_word  		&kp LEFT  		&kp DOWN  		&kp UP  		&kp RIGHT  		&trans
+			&trans  		&trans  		&kp RALT  		&u_to_U_NUM  		&u_to_U_NAV  		&trans       		&kp INS  		&kp HOME  		&kp PG_DN  		&kp PG_UP  		&kp END  		&trans
+												&trans  		&trans  		&trans       		&kp RET  		&kp BSPC  		&kp DEL
+			>;
+		};
+
+	/* Mouse layer */
+	MOUSE {
+		display-name   = "Mouse";
+		bindings       = <
+			&trans  		&bootloader  		&u_to_U_TAP  		&u_to_U_EXTRA 		&u_to_U_BASE  		&studio_unlock		&kp LS(LG(Z))  		&kp LG(V)  		&kp LG(C)  		&kp LG(X)  		&kp LG(Z)  		&trans
+			&trans  		&kp LGUI  		&kp LALT  		&kp LCTRL  		&kp LSHFT  		&trans       		&trans  		&kp KP_N4  		&kp KP_N2  		&kp KP_N8  		&kp KP_N6  		&trans
+			&trans  		&trans  		&kp RALT  		&u_to_U_SYM  		&u_to_U_MOUSE  		&trans       		&trans  		&trans  		&trans  		&trans  		&trans  		&trans
+												&trans  		&trans 			&trans       		&mkp MB2  		&mkp MB1  		&mkp MB3
+			>;
+		};
+
+	/* Media layer */
+	MEDIA {
+		display-name   = "Media";
+		bindings       = <
+			&trans  		&bootloader  		&u_to_U_TAP  		&u_to_U_EXTRA  		&u_to_U_BASE  		&studio_unlock		&rgb_ug RGB_TOG		&rgb_ug RGB_EFF 	&rgb_ug RGB_HUI		&rgb_ug RGB_SAI		&rgb_ug RGB_BRI		&trans
+			&trans  		&kp LGUI  		&kp LALT  		&kp LCTRL  		&kp LSHFT  		&trans       		&ext_power EP_TOG  	&kp C_PREV  		&kp C_VOL_DN  		&kp C_VOL_UP  		&kp C_NEXT  		&trans
+			&trans  		&trans  		&kp RALT  		&u_to_U_FUN  		&u_to_U_MEDIA  		&trans       		&u_out_tog  		&u_bt_sel_0  		&u_bt_sel_1  		&u_bt_sel_2  		&u_bt_sel_3  		&trans
+												&trans  		&trans  		&trans       		&kp C_STOP  		&kp C_PP  		&kp C_MUTE
+			>;
+		};
+
+	/* Number layer */
+	NUM {
+		display-name   = "Num";
+		bindings       = <
+			&trans  		&kp LBKT 		&kp N7  		&kp N8  		&kp N9  		&kp RBKT       		&trans  		&u_to_U_BASE		&u_to_U_EXTRA		&u_to_U_TAP  		&bootloader  		&trans
+			&trans  		&kp SEMI 		&kp N4  		&kp N5  		&kp N6  		&kp EQUAL      		&trans 			&kp LSHFT  		&kp LCTRL  		&kp LALT  		&kp LGUI  		&trans
+			&trans  		&kp GRAVE		&kp N1  		&kp N2  		&kp N3  		&kp BSLH       		&trans  		&u_to_U_NUM 		&u_to_U_NAV  		&kp RALT  		&trans  		&trans
+												&kp DOT  		&kp N0  		&kp MINUS       	&trans  		&trans  		&trans
+			>;
+		};
+
+	/* Symbol layer */
+	SYM {
+		display-name   = "Sym";
+		bindings       = <
+			&trans  		&kp LBRC 		&kp AMPS 		&kp ASTRK  		&kp LPAR  		&kp RBRC       		&studio_unlock  	&u_to_U_BASE  		&u_to_U_EXTRA  		&u_to_U_TAP  		&bootloader  		&trans
+			&trans  		&kp COLON		&kp DLLR		&kp PRCNT  		&kp CARET 		&kp PLUS       		&trans  		&kp LSHFT  		&kp LCTRL  		&kp LALT  		&kp LGUI  		&trans
+			&trans  		&kp TILDE		&kp EXCL		&kp AT  		&kp HASH  		&kp PIPE       		&trans  		&u_to_U_SYM  		&u_to_U_MOUSE  		&kp RALT  		&trans  		&trans
+												&kp LPAR  		&kp RPAR  		&kp UNDER      	 	&trans  		&trans  		&trans
+			>;
+		};
+	
+	/* Function layer */
+	FUN {
+		display-name   = "Fun";
+		bindings       = <
+			&trans  		&kp F12  		&kp F7  		&kp F8  		&kp F9  		&kp PSCRN     		&studio_unlock  	&u_to_U_BASE  		&u_to_U_EXTRA  		&u_to_U_TAP  		&bootloader  		&trans
+			&trans  		&kp F11  		&kp F4  		&kp F5  		&kp F6  		&kp SLCK      		&trans  		&kp LSHFT  		&kp LCTRL  		&kp LALT  		&kp LGUI  		&trans
+			&trans  		&kp F10  		&kp F1  		&kp F2  		&kp F3  		&kp PAUSE_BREAK		&trans  		&u_to_U_FUN  		&u_to_U_MEDIA  		&kp RALT  		&trans  		&trans
+												&kp K_APP  		&kp SPACE  		&kp TAB       		&trans  		&trans  		&trans
+			>;
+		};
+	};
 };
