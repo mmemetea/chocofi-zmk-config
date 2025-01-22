@@ -289,7 +289,7 @@
 		bindings = <
 			&trans			&bootloader		&u_to_U_TAP		&u_to_U_EXTRA		&u_to_U_BASE		&trans			&trans			&trans			&trans			&trans			&trans			&trans
 			&trans			&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans			&ext_power EP_TOG	&kp C_PREV		&kp C_VOL_DN		&kp C_VOL_UP		&kp C_NEXT		&trans
-			&trans			&trans			&kp RALT		&u_to_U_FUN		&u_to_U_MEDIA		&trans			&u_out_tog		&u_bt_sel_0		&u_bt_sel_1		&u_bt_sel_2		&u_bt_sel_3		&trans
+			&trans			&studio_unlock		&kp RALT		&u_to_U_FUN		&u_to_U_MEDIA		&trans			&u_out_tog		&u_bt_sel_0		&u_bt_sel_1		&u_bt_sel_2		&u_bt_sel_3		&trans
 												&trans			&trans			&trans			&kp C_STOP		&kp C_PP		&kp C_MUTE
 			>;
 		};
