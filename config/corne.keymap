@@ -15,7 +15,7 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/portuguese.dtsi"
 #include "zmk-helpers/unicode-chars/french.dtsi"
-/* #include "keys_pt.h" */
+#include "keys_pt.h"
 
 #define UNDO LG(Z)
 #define CUT LG(X)
@@ -75,6 +75,44 @@
         };
     };
 };
+
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        e_circumflex {
+            bindings = <&kp PT_C_CEDILLA>;
+            key-positions = <12 22>;
+        };
+
+        accent_grave {
+            bindings = <&kp PT_GRAVE>;
+            key-positions = <6 17>;
+        };
+
+        accent_acute {
+            bindings = <&kp PT_ACUTE>;
+            key-positions = <17 8>;
+        };
+
+        accent_circumflex {
+            bindings = <&kp PT_CARET>;
+            key-positions = <17 7>;
+        };
+
+        euro {
+            bindings = <&kp PT_EURO>;
+            key-positions = <17 27>;
+        };
+
+        umlaut {
+            bindings = <&kp PT_UMLAUT>;
+            key-positions = <17 9>;
+        };
+    };
+};
+
 
 / {
     behaviors {
@@ -382,4 +420,3 @@
             >;
         };
     };
-};
