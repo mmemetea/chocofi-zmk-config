@@ -332,7 +332,7 @@
     };
 };
 
-
+/ {
     keymap {
         compatible = "zmk,keymap";
 
@@ -456,3 +456,4 @@
             >;
         };
     };
+};
