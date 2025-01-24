@@ -12,6 +12,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/portuguese.dtsi"
+#include "zmk-helpers/unicode-chars/french.dtsi"
 
 #define UNDO LG(Z)
 #define CUT LG(X)
