@@ -238,7 +238,7 @@
 			&kp Q			&kp W			&kp F			&kp P			&kp B			&kp J			&kp L			&kp U			&kp Y			&kp SQT
 			&u_mt LGUI A		&u_mt LALT R		&u_mt LCTRL S		&u_mt LSHFT T		&kp G			&kp M			&u_mt LSHFT N		&u_mt LCTRL E		&u_mt LALT I		&u_mt LGUI O
 			&u_lt 3 Z		&u_mt RALT X		&kp C			&kp D			&kp V			&kp K			&kp H			&kp COMMA		&u_mt RALT DOT		&u_lt 3 SLASH
-									&u_lt 6 ESC		&u_lt 4 SPACE		&u_lt 5 TAB		&u_lt 8 RET		&u_lt 7 BSPC		&u_lt 9 DEL
+									&u_lt 6 ESC		&u_lt 4 TAB		&u_lt 5 SPACE		&u_lt 8 BSPC		&u_lt 7 RET		&u_lt 9 DEL
 			>;
 		};
 
@@ -249,7 +249,7 @@
 			&kp Q			&kp W			&kp E			&kp R			&kp T			&kp Y			&kp U			&kp I			&kp O			&kp P
 			&u_mt LGUI A		&u_mt LALT S		&u_mt LCTRL D		&u_mt LSHFT F		&kp G			&kp H			&u_mt LSHFT J		&u_mt LCTRL K		&u_mt LALT L		&u_mt LGUI SQT
 			&u_lt 3 Z		&u_mt RALT X		&kp C			&kp V			&kp B			&kp N			&kp M			&kp COMMA		&u_mt RALT DOT		&u_lt 3 SLASH
-									&u_lt 6	ESC		&u_lt 4 SPACE		&u_lt 5 TAB		&u_lt 8 RET		&u_lt 7 BSPC		&u_lt 9 DEL
+									&u_lt 6	ESC		&u_lt 4 TAB		&u_lt 5 SPACE		&u_lt 8 BSPC		&u_lt 7 RET		&u_lt 9 DEL
 			>;
 		};
 
@@ -260,7 +260,7 @@
 			&kp Q			&kp W			&kp F			&kp P			&kp B			&kp J			&kp L			&kp U			&kp Y			&kp SQT
 			&kp A			&kp R			&kp S			&kp T			&kp G			&kp M			&kp N			&kp E			&kp I			&kp O
 			&kp Z			&kp X			&kp C			&kp D			&kp V			&kp K			&kp H			&kp COMMA		&kp DOT			&kp SLASH
-									&kp ESC			&kp SPACE		&kp TAB			&kp RET			&kp BSPC		&kp DEL
+									&kp ESC			&kp TAB			&kp SPACE		&kp BSPC		&kp RET			&kp DEL
 			>;
 		};
 
@@ -268,9 +268,9 @@
 	BUTTON {
 		display-name = "Button";
 		bindings = <
-			&kp UNDO		&kp CUT		&kp COPY		&kp PASTE		&kp REDO		&kp LS(LG(Z))		&kp LG(V)		&kp LG(C)		&kp LG(X)		&kp LG(Z)
+			&kp UNDO		&kp CUT			&kp COPY		&kp PASTE		&kp REDO		&kp REDO		&kp PASTE		&kp COPY		&kp CUT			&kp UNDO
 			&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans			&trans			&kp LSHFT		&kp LCTRL		&kp LALT		&kp LGUI
-			&kp LG(Z)		&kp LG(X)		&kp LG(C)		&kp LG(V)		&kp LS(LG(Z))		&kp LS(LG(Z))		&kp LG(V)		&kp LG(C)		&kp LG(X)		&kp LG(Z)
+			&kp UNDO		&kp CUT			&kp COPY		&kp PASTE		&kp REDO		&kp REDO		&kp PASTE		&kp COPY		&kp CUT			&kp UNDO
 									&mkp MB3		&mkp MB1		&mkp MB2		&mkp MB2		&mkp MB1		&mkp MB3
 			>;
 		};
@@ -279,10 +279,10 @@
 	NAV {
 		display-name = "Nav";
 		bindings = <
-			&trans			&u_to_U_TAP		&u_to_U_EXTRA		&u_to_U_BASE		&trans			&kp LS(LG(Z))		&kp LG(V)		&kp LG(C)		&kp LG(X)		&kp LG(Z)
+			&trans			&u_to_U_TAP		&u_to_U_EXTRA		&u_to_U_BASE		&trans			&kp REDO		&kp PASTE		&kp COPY		&kp CUT			&kp UNDO
 			&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans			&u_caps_word		&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
 			&trans			&kp RALT		&u_to_U_NUM		&u_to_U_NAV		&trans			&kp INS			&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
-									&trans			&trans			&trans			&kp RET			&kp BSPC		&kp DEL
+									&trans			&trans			&trans			&kp BSPC		&kp RET			&kp DEL
 			>;
 		};
 
@@ -290,7 +290,7 @@
 	MOUSE {
 		display-name = "Mouse";
 		bindings = <
-			&trans			&u_to_U_TAP		&u_to_U_EXTRA		&u_to_U_BASE		&trans			&kp LS(LG(Z))		&kp LG(V)		&kp LG(C)		&kp LG(X)		&kp LG(Z)
+			&trans			&u_to_U_TAP		&u_to_U_EXTRA		&u_to_U_BASE		&trans			&kp REDO		&kp PASTE		&kp COPY		&kp CUT			&kp UNDO
 			&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans			&trans			&kp KP_N4		&kp KP_N2		&kp KP_N8		&kp KP_N6
 			&trans			&kp RALT		&u_to_U_SYM		&u_to_U_MOUSE		&trans			&trans			&trans			&trans			&trans			&trans
 									&trans			&trans			&trans			&mkp MB2		&mkp MB1		&mkp MB3
@@ -326,7 +326,7 @@
 			&kp LBRC		&kp AMPS		&kp ASTRK		&kp LPAR		&kp RBRC		&trans			&u_to_U_BASE		&u_to_U_EXTRA		&u_to_U_TAP		&trans
 			&kp COLON		&kp DLLR		&kp PRCNT		&kp CARET		&kp PLUS		&trans			&kp LSHFT		&kp LCTRL		&kp LALT		&kp LGUI
 			&kp TILDE		&kp EXCL		&kp AT			&kp HASH		&kp PIPE		&trans			&u_to_U_SYM		&u_to_U_MOUSE		&kp RALT		&trans
-									&kp LPAR		&kp RPAR		&kp UNDER		&trans			&trans		&trans
+									&kp LPAR		&kp RPAR		&kp UNDER		&trans			&trans			&trans
 			>;
 		};
 
@@ -337,7 +337,7 @@
 			&kp F12			&kp F7			&kp F8			&kp F9			&kp PSCRN		&trans			&u_to_U_BASE		&u_to_U_EXTRA		&u_to_U_TAP		&bootloader
 			&kp F11			&kp F4			&kp F5			&kp F6			&kp SLCK		&trans			&kp LSHFT		&kp LCTRL		&kp LALT		&kp LGUI
 			&kp F10			&kp F1			&kp F2			&kp F3			&kp PAUSE_BREAK		&trans			&u_to_U_FUN		&u_to_U_MEDIA		&kp RALT		&trans
-									&kp K_APP		&kp SPACE		&kp TAB			&trans			&trans		&trans
+									&kp K_APP		&kp TAB			&kp SPACE		&trans			&trans			&trans
 			>;
 		};
 	};
