@@ -11,6 +11,11 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+#define UNDO LG(Z)
+#define CUT LG(X)
+#define COPY LG(C)
+#define PASTE LG(V)
+#define REDO LS(LG(Z))
 
 / {
 	chosen {
@@ -263,7 +268,7 @@
 	BUTTON {
 		display-name = "Button";
 		bindings = <
-			&kp LG(Z)		&kp LG(X)		&kp LG(C)		&kp LG(V)		&kp LS(LG(Z))		&kp LS(LG(Z))		&kp LG(V)		&kp LG(C)		&kp LG(X)		&kp LG(Z)
+			&kp UNDO		&kp CUT		&kp COPY		&kp PASTE		&kp REDO		&kp LS(LG(Z))		&kp LG(V)		&kp LG(C)		&kp LG(X)		&kp LG(Z)
 			&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans			&trans			&kp LSHFT		&kp LCTRL		&kp LALT		&kp LGUI
 			&kp LG(Z)		&kp LG(X)		&kp LG(C)		&kp LG(V)		&kp LS(LG(Z))		&kp LS(LG(Z))		&kp LG(V)		&kp LG(C)		&kp LG(X)		&kp LG(Z)
 									&mkp MB3		&mkp MB1		&mkp MB2		&mkp MB2		&mkp MB1		&mkp MB3
