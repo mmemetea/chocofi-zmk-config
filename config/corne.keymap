@@ -16,11 +16,12 @@
 #include "zmk-helpers/unicode-chars/french.dtsi"
 #include "keys_pt.h"
 
-#define UNDO LG(Z)
+/* #define UNDO LG(Z)
 #define CUT LG(X)
 #define COPY LG(C)
 #define PASTE LG(V)
 #define REDO LS(LG(Z))
+*/
 
 / {
     chosen { zmk,physical-layout = &foostan_corne_5col_layout; };
