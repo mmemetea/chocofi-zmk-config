@@ -14,6 +14,7 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/portuguese.dtsi"
 #include "zmk-helpers/unicode-chars/french.dtsi"
+#include "keys_pt.h"
 
 #define UNDO LG(Z)
 #define CUT LG(X)
