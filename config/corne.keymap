@@ -74,36 +74,17 @@
             >;
         };
 
-        /* Extra layer */
-        EXTRA_1 {
-            display-name = "Extra";
-            bindings = <
-                &kp Q			&kp W			&kp E			&kp R			&kp T			&kp Y			&kp U			&kp I			&kp O			&kp P
-                &mt LGUI A		&mt LALT S		&mt LCTRL D		&mt LSHFT F		&kp G			&kp H			&mt LSHFT J		&mt LCTRL K		&mt LALT L		&mt LGUI SQT
-                &lt 3 Z	    	&mt RALT X		&kp C			&kp V			&kp B			&kp N			&kp M			&kp COMMA		&mt RALT DOT	&lt 3 SLASH
-                                                &lt 6	ESC		&lt 4 TAB		&lt 5 SPACE		&lt 8 BSPC		&lt 7 RET		&lt 9 DEL
-            >;
-        };
-
         /* Button layer */
-        BUTTON_2 {
+        NAV_1
+    
+
+        {
             display-name = "Button";
             bindings = <
                 &kp UNDO		&kp CUT			&kp COPY		&kp PASTE		&kp REDO		&kp REDO		&kp PASTE		&kp COPY		&kp CUT			&kp UNDO
-                &kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans			&trans			&kp LSHFT		&kp LCTRL		&kp LALT		&kp LGUI
-                &kp UNDO		&kp CUT			&kp COPY		&kp PASTE		&kp REDO		&kp REDO		&kp PASTE		&kp COPY		&kp CUT			&kp UNDO
-                                                &mkp MB3		&mkp MB1		&mkp MB2		&mkp MB2		&mkp MB1		&mkp MB3
-            >;
-        };
-
-        /* Navigation layer */
-        NAV_3 {
-            display-name = "Nav";
-            bindings = <
-                &trans			&trans		    &tog 1	        &tog 0	        &trans			&kp REDO		&kp PASTE		&kp COPY		&kp CUT			&kp UNDO
                 &kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans			&caps_word		&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
-                &trans			&kp RALT		&tog 5  		&tog 3  		&trans			&kp INS			&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
-                                                &trans			&trans			&trans			&kp BSPC		&kp RET			&kp DEL
+                &trans		    &trans		    &trans		    &trans		    &trans		    &kp INS			&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
+                                                &mkp MB3		&mkp MB1		&mkp MB2		&kp BSPC		&kp RET			&kp DEL
             >;
         };
 
