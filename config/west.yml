@@ -51,3 +51,7 @@ manifest:
 
   self:
     path: config
+    west-commands: scripts/west-commands.yml
+    build:
+      settings:
+        board-overlay: corne_left.overlay
