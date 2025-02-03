@@ -26,7 +26,9 @@
 	chosen {
 		zmk,physical-layout = &foostan_corne_5col_layout;
 	};
+};
 
+/ {
 	macros {
 		/* Macro to select Bluetooth device 0 */
 
@@ -394,5 +396,4 @@
 			>;
 		};
 	};
-
-};
+	
