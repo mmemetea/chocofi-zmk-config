@@ -10,6 +10,12 @@
  #include <dt-bindings/zmk/ext_power.h>
  #include <dt-bindings/zmk/keys.h>
  #include <dt-bindings/zmk/outputs.h>
+ #include <dt-bindings/zmk/modifiers.h>
+
+ #include "zmk-helpers/helper.h"
+ #include "zmk-helpers/unicode-chars/portuguese.dtsi"
+ #include "zmk-helpers/unicode-chars/french.dtsi"
+ #include "keys_pt.h"
   
  /*
  #define UNDO LG(Z)
