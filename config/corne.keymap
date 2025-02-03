@@ -75,6 +75,9 @@
 			bindings = <&bt BT_SEL 4 &bt BT_CLR>;
 		};
 	};
+};
+
+/ {
 
 	behaviors {
 		u_mt: u_mt {
@@ -255,6 +258,9 @@
 			bindings = <&trans>, <&to 9>;
 		};
 	};
+};
+
+/ {
 
 	combos {
 		compatible = "zmk,combos";
@@ -264,6 +270,9 @@
 			key-positions = <8 20>;
 		};
 	};
+};
+
+/ {
 
 	keymap {
 		compatible = "zmk,keymap";
