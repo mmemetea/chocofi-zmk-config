@@ -14,8 +14,6 @@
 #include "zmk-helpers/unicode-chars/portuguese.dtsi"
 #include "zmk-helpers/unicode-chars/french.dtsi"
 
-#define REDO LS(LG(Z))
-
 #define _BASE		0
 #define _EXTRA		1
 #define _TAP		2
@@ -92,9 +90,9 @@
 		_BUTTON {
 			display-name = "Button";
 			bindings = <
-			&kp UNDO		&kp CUT			&kp COPY		&kp PASTE		&kp REDO				&kp REDO		&kp PASTE		&kp COPY		&kp CUT			&kp UNDO
+			&kp K_UNDO		&kp K_CUT		&kp K_COPY		&kp K_PASTE		&kp K_REDO				&kp K_REDO		&kp K_PASTE		&kp K_COPY		&kp K_CUT		&kp K_UNDO
 			&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans					&trans			&kp LSHFT		&kp LCTRL		&kp LALT		&kp LGUI
-			&kp UNDO		&kp CUT			&kp COPY		&kp PASTE		&kp REDO				&kp REDO		&kp PASTE		&kp COPY		&kp CUT			&kp UNDO
+			&kp K_UNDO		&kp K_CUT		&kp K_COPY		&kp K_PASTE		&kp K_REDO				&kp K_REDO		&kp K_PASTE		&kp K_COPY		&kp K_CUT		&kp K_UNDO
 											&mkp MB3		&mkp MB1		&mkp MB2				&mkp MB2		&mkp MB1		&mkp MB3
 			>;
 		};
@@ -103,7 +101,7 @@
 		_NAV {
 			display-name = "Nav";
 			bindings = <
-			&trans			&lt _TAP		&lt _EXTRA		&lt _BASE		&trans					&kp REDO		&kp PASTE		&kp COPY		&kp CUT			&kp UNDO
+			&trans			&lt _TAP		&lt _EXTRA		&lt _BASE		&trans					&kp K_REDO		&kp K_PASTE		&kp K_COPY		&kp K_CUT		&kp K_UNDO
 			&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans					&kp CAPS		&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
 			&trans			&kp RALT		&lt _NUM		&lt _NAV		&trans					&kp INS			&kp HOME		&kp PG_DN		&kp PG_UP		&kp END
 											&trans			&trans			&trans					&kp BSPC		&kp RET			&kp DEL
@@ -114,7 +112,7 @@
 		_MOUSE {
 			display-name = "Mouse";
 			bindings = <
-			&trans			&lt _TAP		&lt _EXTRA		&lt _BASE		&trans					&kp REDO		&kp PASTE		&kp COPY		&kp CUT			&kp UNDO
+			&trans			&lt _TAP		&lt _EXTRA		&lt _BASE		&trans					&kp K_REDO		&kp K_PASTE		&kp K_COPY		&kp K_CUT		&kp K_UNDO
 			&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans					&trans			&kp KP_N4		&kp KP_N2		&kp KP_N8		&kp KP_N6
 			&trans			&kp RALT		&lt _SYM		&lt _MOUSE		&trans					&trans			&trans			&trans			&trans			&trans
 											&trans			&trans			&trans					&mkp MB2		&mkp MB1		&mkp MB3
