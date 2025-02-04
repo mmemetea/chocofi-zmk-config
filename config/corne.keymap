@@ -14,10 +14,6 @@
 #include "zmk-helpers/unicode-chars/portuguese.dtsi"
 #include "zmk-helpers/unicode-chars/french.dtsi"
 
-#define UNDO LG(Z)
-#define CUT LG(X)
-#define COPY LG(C)
-#define PASTE LG(V)
 #define REDO LS(LG(Z))
 
 #define _BASE		0
@@ -41,7 +37,7 @@
 
 		e_circumflex {
 			bindings = <&kp GRAVE>;
-			key-positions = <8 20>;
+			key-positions = <7 17>;
 		};
 	};
 
