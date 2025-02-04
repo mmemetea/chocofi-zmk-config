@@ -25,9 +25,7 @@
 	chosen {
 		zmk,physical-layout = &foostan_corne_5col_layout;
 	};
-};
 
-/ {
 	macros {
 		/* Macro to select Bluetooth device 0 */
 
@@ -74,9 +72,6 @@
 			bindings = <&bt BT_SEL 4 &bt BT_CLR>;
 		};
 	};
-};
-
-/ {
 
 	behaviors {
 		u_mt: u_mt {
@@ -269,9 +264,6 @@
 			key-positions = <8 20>;
 		};
 	};
-};
-
-/ {
 
 	keymap {
 		compatible = "zmk,keymap";
