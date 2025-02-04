@@ -37,6 +37,6 @@ include:
 
 steps:
   - name: Test
-    run: echo "Test" >> "$GITHUB_OUTPUT"
-    run: echo "$commit_sha" >> "$GITHUB_OUTPUT"
+    run_01: echo "Test" >> "$GITHUB_OUTPUT"
+    run_02: echo "$commit_sha" >> "$GITHUB_OUTPUT"
 
