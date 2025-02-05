@@ -3,9 +3,6 @@
 
 #pragma once
 
-#define MIRYOKU_EXTRA_QWERTY
-#define MIRYOKU_CLIPBOARD_MAC
-
 #include <dt-bindings/zmk/hid_usage.h>
 #include <dt-bindings/zmk/hid_usage_pages.h>
 #include <dt-bindings/zmk/modifiers.h>
