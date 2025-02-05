@@ -39,7 +39,7 @@
 		};
 
 		c_cedilla {
-			bindings = <&kp PT_C_CEDILLA>;
+			bindings = <&kp pt_c_cedilla>;
 			key-positions = <12 22>;
 		};
 
