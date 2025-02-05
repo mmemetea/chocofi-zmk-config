@@ -44,6 +44,7 @@
 		c_cedilla {
 			bindings = <&kp PT_C_CEDILLA>;
 			key-positions = <12 22>;
+		};
 
 		reboot {
 			bindings = <&sys_reset>;
@@ -54,8 +55,6 @@
 			bindings = <&bootloader>;
 			key-positions = <4 24>;
 		};
-
-
 	};
 
 	keymap {
