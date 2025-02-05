@@ -37,13 +37,27 @@
 			bindings = <&kp GRAVE>;
 			key-positions = <7 17>;
 		};
+
+		c_cedilla {
+			bindings = <&kp PT_C_CEDILLA>;
+			key-positions = <12 22>;
+		};
+
 	};
 
 	keymap {
 		compatible = "zmk,keymap";
 
-		/* Base layer */
-
+		//╭─────────────┬───────────────┬───────────────┬───────────────┬───────────────╮	╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
+		//│		00		│		01		│		02		│		03		│		04		│	│		05		│		06		│		07		│		08		│		09		│
+		//├─────────────┼───────────────┼───────────────┼───────────────┼───────────────┤	├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
+		//│		10		│		11		│		12		│		13		│		14		│	│		15		│		16		│		17		│		18		│		19		│
+		//├─────────────┼───────────────┼───────────────┼───────────────┼───────────────┤	├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
+		//│		20		│		21		│		22		│		23		│		24		│	│		25		│		26		│		27		│		28		│		29		│
+		//╰─────────────┴───────────────┼───────────────┼───────────────┼───────────────┤	├───────────────┼───────────────┼───────────────┼───────────────┴───────────────╯
+		//							 	│		30		│		31		│		32		│	│		33		│		34		│		35		│
+		//								╰───────────────┴───────────────┴───────────────╯	╰───────────────┴───────────────┴───────────────╯
+		//
 		//╭─────────────┬───────────────┬───────────────┬───────────────┬───────────────╮	╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
 		//│		Q		│		W		│		F		│		P		│		B		│	│		J		│		L		│		U		│		Y		│		'	"	│
 		//├─────────────┼───────────────┼───────────────┼───────────────┼───────────────┤	├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
@@ -70,23 +84,21 @@
 			bindings = <
 			&kp Q			&kp W			&kp F			&kp P			&kp B					&kp J			&kp L			&kp U			&kp Y			&kp SQT
 			&mt LGUI A		&mt LALT R		&mt LCTRL S		&mt LSHFT T		&kp G					&kp M			&mt LSHFT N		&mt LCTRL E		&mt LALT I		&mt LGUI O
-			&lt 3 Z			&mt RALT X		&kp C			&kp D			&kp V					&kp K			&kp H			&kp COMMA		&mt RALT DOT	&lt 3 SLASH
+			&kp Z			&kp X			&kp C			&kp D			&kp V					&kp K			&kp H			&kp COMMA		&kp DOT			&kp SLASH
 											&lt _MEDIA ESC	&lt _NAV TAB	&lt _MOUSE SPACE		&lt _SYM BSPC	&lt _NUM RET	&lt _FUN DEL
 			>;
 		};
 
-		/* Extra layer */
 		_EXTRA {
 			display-name = "Extra";
 			bindings = <
 			&kp Q			&kp W			&kp E			&kp R			&kp T					&kp Y			&kp U			&kp I			&kp O			&kp P
 			&mt LGUI A		&mt LALT S		&mt LCTRL D		&mt LSHFT F		&kp G					&kp H			&mt LSHFT J		&mt LCTRL K		&mt LALT L		&mt LGUI SQT
-			&lt 3 Z			&mt RALT X		&kp C			&kp V			&kp B					&kp N			&kp M			&kp COMMA		&mt RALT DOT	&lt 3 SLASH
+			&kp Z			&kp X			&kp C			&kp V			&kp B					&kp N			&kp M			&kp COMMA		&kp DOT			&kp SLASH
 											&lt _MEDIA ESC	&lt _NAV TAB	&lt _MOUSE SPACE		&lt _SYM BSPC	&lt _NUM RET	&lt _FUN DEL
 			>;
 		};
 
-		/* Tap layer */
 		_TAP {
 			display-name = "Tap";
 			bindings = <
@@ -97,7 +109,6 @@
 			>;
 		};
 
-		/* Button layer */
 		_BUTTON {
 			display-name = "Button";
 			bindings = <
@@ -108,7 +119,6 @@
 			>;
 		};
 
-		/* Navigation layer */
 		_NAV {
 			display-name = "Nav";
 			bindings = <
@@ -119,7 +129,6 @@
 			>;
 		};
 
-		/* Mouse layer */
 		_MOUSE {
 			display-name = "Mouse";
 			bindings = <
@@ -130,7 +139,6 @@
 			>;
 		};
 
-		/* Media layer */
 		_MEDIA {
 			display-name = "Media";
 			bindings = <
@@ -141,7 +149,6 @@
 			>;
 		};
 
-		/* Number layer */
 		_NUM {
 			display-name = "Num";
 			bindings = <
@@ -152,7 +159,6 @@
 			>;
 		};
 
-		/* Symbol layer */
 		_SYM {
 			display-name = "Sym";
 			bindings = <
@@ -163,7 +169,6 @@
 			>;
 		};
 
-		/* Function layer */
 		_FUN {
 			display-name = "Fun";
 			bindings = <
