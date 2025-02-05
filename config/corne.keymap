@@ -39,7 +39,7 @@
 		};
 
 		c_cedilla {
-			bindings = <&kp A>;
+			bindings = <&kp pt_a_tilde>;
 			key-positions = <12 22>;
 		};
 
