@@ -32,6 +32,3 @@ Illustrations powered by keymap-drawer
 
 ![Image 5](./assets/chocofi_custom_case_5.png)
 
-![Image 6](./assets/chocofi_custom_case_6.png)
-
-![Image 7](./assets/chocofi_custom_case_7.png)
