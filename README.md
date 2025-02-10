@@ -5,6 +5,7 @@ Created with [ZMK](https://zmkfirmware.dev/).
 Inspired by the [Miryoku layout by Manna Harbour](https://github.com/manna-harbour/qmk_firmware/blob/miryoku/users/manna-harbour_miryoku/miryoku.org).  
 
 ## Features
+
 - Split, column-staggered, 5 x 3 + 3 layout
 - Homerow modifiers (Shift, Control, Alt, Super)
 - Numpad
@@ -31,4 +32,3 @@ Illustrations powered by keymap-drawer
 ![Image 4](./assets/chocofi_custom_case_4.png)
 
 ![Image 5](./assets/chocofi_custom_case_5.png)
-
