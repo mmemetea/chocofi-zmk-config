@@ -120,8 +120,8 @@
 	NAV	{
 	bindings	= <
 	&trans			&to TAP			&to QWERTY		&to BASE		&trans					&kp K_REDO		&kp K_PASTE		&kp K_COPY		&kp K_CUT		&kp K_UNDO
-	&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans					&kp CAPS		&kp LEFT		&kp DOWN		&kp UP			&kp RIGHT
-	&trans			&kp RALT		&to NUMBER		&to NAV			&trans					&kp INS			&kp HOME	 	&kp PG_DN	 	&kp PG_UP		&kp END
+	&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans					&kp CAPS		&kp LEFT		&kp UP			&kp RIGHT		&kp HOME
+	&trans			&kp RALT		&to NUMBER		&to NAV			&trans					&kp INS			&kp PG_DN	 	&kp DOWN	 	&kp PG_UP		&kp END
 									&trans			&trans			&trans					&kp BSPC		&kp RET			&kp DEL
 	>;
 	};
