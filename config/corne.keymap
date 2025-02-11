@@ -82,6 +82,7 @@
 // ------------------------------------------------------------------
 
 	BASE {
+	display-name = "BASE";
 	bindings	= <
 	&kp Q			&kp W			&kp F			&kp P			&kp B					&kp J			&kp L			&kp U			&kp Y			&kp SQT
 	&mt LGUI A		&mt LALT R		&mt LCTRL S		&mt LSHFT T		&kp G	 				&kp M			&mt LSHFT N		&mt LCTRL E		&mt LALT I		&mt LGUI O
@@ -91,6 +92,7 @@
 	};
 
 	QWERTY {
+	display-name = "QWERTY";
 	bindings	= <
 	&kp Q	 		&kp W	 		&kp E	 		&kp R	 		&kp T	 				&kp Y			&kp U	 		&kp I	 		&kp O	 		&kp P
 	&mt LGUI A		&mt LALT S		&mt LCTRL D	 	&mt LSHFT F	 	&kp G	 				&kp H			&mt LSHFT J	 	&mt LCTRL K	 	&mt LALT L		&mt LGUI SQT
@@ -100,6 +102,7 @@
 	};
 
 	TAP {
+	display-name = "TAP";	
 	bindings	= <
 	&kp Q			&kp W			&kp F			&kp P			&kp B					&kp J	 		&kp L			&kp U			&kp Y			&kp SQT
 	&kp A			&kp R			&kp S			&kp T			&kp G					&kp M	 		&kp N			&kp E			&kp I			&kp O
@@ -109,6 +112,7 @@
 	};
 
 	BUTTON {
+	display-name = "BUTTON";
 	bindings	= <
 	&kp K_UNDO		&kp K_CUT		&kp K_COPY		&kp K_PASTE		&kp K_REDO				&kp K_REDO		&kp K_PASTE		&kp K_COPY		&kp K_CUT		&kp K_UNDO
 	&kp LGUI		&kp LALT	 	&kp LCTRL	 	&kp LSHFT		&trans					&trans			&kp LSHFT		&kp LCTRL	 	&kp LALT	 	&kp LGUI
@@ -118,6 +122,7 @@
 	};
 
 	NAV	{
+	display-name = "NAV";
 	bindings	= <
 	&trans			&to TAP			&to QWERTY		&to BASE		&trans					&kp K_REDO		&kp K_PASTE		&kp K_COPY		&kp K_CUT		&kp K_UNDO
 	&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans					&kp CAPS		&kp LEFT		&kp UP			&kp RIGHT		&kp HOME
@@ -127,6 +132,7 @@
 	};
 
 	MOUSE {
+	display-name = "MOUSE";
 	bindings	= <
 	&trans			&to TAP			&to QWERTY		&to BASE	 	&trans					&kp K_REDO		&kp K_PASTE		&kp K_COPY		&kp K_CUT		&kp K_UNDO
 	&kp LGUI		&kp LALT		&kp LCTRL	 	&kp LSHFT		&trans					&trans			&kp KP_N4		&kp KP_N2	 	&kp KP_N8		&kp KP_N6
@@ -136,6 +142,7 @@
 	};
 
 	MEDIA {
+	display-name = "MEDIA";
 	bindings	= <
 	&bootloader	 	&to TAP			&to QWERTY		&to BASE	 	&sys_reset				&trans	 		&trans			&trans			&trans			&trans
 	&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans					&ext_power EP_TOG	&kp C_PREV	&kp C_VOL_DN	&kp C_VOL_UP	&kp C_NEXT
@@ -145,6 +152,7 @@
 	};
 
 	NUMBER {
+	display-name = "NUMBER";
 	bindings	= <
 	&kp LBKT		&kp N7			&kp N8			&kp N9			&kp RBKT	 			&trans			&to BASE		&to QWERTY		&to TAP			&trans
 	&kp SEMI		&kp N4			&kp N5			&kp N6			&kp EQUAL				&trans			&kp LSHFT		&kp LCTRL	 	&kp LALT		&kp LGUI
@@ -154,6 +162,7 @@
 	};
 
 	SYMBOL {
+	display-name = "SYMBOL";
 	bindings	= <
 	&kp LBRC	 	&kp AMPS		&kp ASTRK		&kp LPAR	 	&kp RBRC	 			&trans			&to BASE		&to QWERTY		&to TAP			&trans
 	&kp COLON		&kp DLLR		&kp PRCNT		&kp CARET		&kp PLUS	 			&trans			&kp LSHFT		&kp LCTRL	 	&kp LALT		&kp LGUI
@@ -163,6 +172,7 @@
 	};
 
 	FUNC {
+	display-name = "FUNCTION";
 	bindings	= <
 	&kp F12			&kp F7			&kp F8	 		&kp F9	 		&kp PSCRN				&sys_reset		&to BASE		&to QWERTY		&to TAP			&bootloader
 	&kp F11			&kp F4			&kp F5	 		&kp F6	 		&kp SLCK	 			&trans			&kp LSHFT		&kp LCTRL	 	&kp LALT		&kp LGUI
