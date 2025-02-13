@@ -60,6 +60,22 @@
 	bindings	= <&bootloader>;
 	key-positions	 = <5 25>;
 	};
+
+	copy {
+	bindings	= <&kp K_COPY>;
+	key-positions 	= <21 22>;
+	};
+
+	paste {
+	bindings	= <&kp K_PASTE>;
+	key-positions 	= <22 23>;
+	};
+	
+	cut {
+	bindings	= <&kp K_CUT>;
+	key-positions 	= <21 23>;
+	};
+		
 	};
 
 	keymap {
@@ -101,8 +117,8 @@
 	NAV	{
 	display-name = "NAV";
 	bindings	= <
-	&trans			&trans			&trans			&to BASE		&trans					&kp K_REDO		&kp K_PASTE		&kp K_COPY		&kp K_CUT		&kp K_UNDO
-	&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans					&kp CAPS		&kp LEFT		&kp UP			&kp RIGHT		&kp HOME
+	&trans			&trans			&trans			&to BASE		&trans					&kp K_REDO		&kp K_PASTE		&kp UP			&kp K_CUT		&kp K_UNDO
+	&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans					&kp CAPS		&kp LEFT		&kp DOWN		&kp RIGHT		&kp HOME
 	&trans			&kp RALT		&to NUMBER		&to NAV			&trans					&kp INS			&kp PG_DN	 	&kp DOWN	 	&kp PG_UP		&kp END
 									&trans			&trans			&trans					&kp BSPC		&kp RET			&kp DEL
 	>;
@@ -131,10 +147,10 @@
 	SYMBOL {
 	display-name = "SYMBOL";
 	bindings	= <
-	&kp LBRC	 	&kp AMPS		&kp ASTRK		&kp LPAR	 	&kp RBRC	 			&trans			&to BASE		&trans			&trans			&trans
-	&kp COLON		&kp DLLR		&kp PRCNT		&kp CARET		&kp PLUS	 			&trans			&kp LSHFT		&kp LCTRL	 	&kp LALT		&kp LGUI
-	&kp TILDE		&kp EXCL		&kp AT	 		&kp HASH	 	&kp PIPE	 			&trans			&to SYMBOL	 	&trans			&kp RALT		&trans
-	 								&kp LPAR	 	&kp RPAR	 	&kp UNDER				&trans			&trans	 		&trans
+	&kp LBRC	 	&kp AMPS		&kp ASTRK		&kp LBRC	 	&kp LBRC	 			&kp RBRC		&to BASE		&trans			&trans			&trans
+	&kp COLON		&kp DLLR		&kp PRCNT		&kp LBKT		&kp LBKT	 			&kp RBKT		&kp LSHFT		&kp LCTRL	 	&kp LALT		&kp LGUI
+	&kp TILDE		&kp EXCL		&kp AT	 		&kp LPAR	 	&kp LPAR	 			&kp RPAR		&to SYMBOL	 	&trans			&kp RALT		&trans
+									&trans		 	&trans		 	&kp UNDER				&trans			&trans	 		&trans
 	>;
 	};
 
