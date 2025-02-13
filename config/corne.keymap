@@ -147,8 +147,8 @@
 	SYMBOL {
 	display-name = "SYMBOL";
 	bindings	= <
-	&kp LBRC	 	&kp AMPS		&kp ASTRK		&kp LBRC	 	&kp LBRC	 			&kp RBRC		&to BASE		&trans			&trans			&trans
-	&kp COLON		&kp DLLR		&kp PRCNT		&kp LBKT		&kp LBKT	 			&kp RBKT		&kp LSHFT		&kp LCTRL	 	&kp LALT		&kp LGUI
+	&kp N1	 		&kp N2			&kp N3			&kp N4	 		&kp N5	 				&kp N6			&kp N7			&kp N8			&kp N9			&kp N0
+	&kp COLON		&kp DLLR		&kp LBRC		&kp LBKT		&kp LPAR	 			&kp RBKT		&kp RBKT		&kp RBRC	 	&kp LALT		&kp LGUI
 	&kp TILDE		&kp EXCL		&kp AT	 		&kp LPAR	 	&kp LPAR	 			&kp RPAR		&to SYMBOL	 	&trans			&kp RALT		&trans
 									&trans		 	&trans		 	&kp UNDER				&trans			&trans	 		&trans
 	>;
