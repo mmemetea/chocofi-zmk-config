@@ -32,9 +32,12 @@
 #define REDO LS(LG(Z))
 
 / {
-	chosen { zmk,physical-layout	= &foostan_corne_5col_layout; };
+	chosen { zmk,physical-layout = &foostan_corne_5col_layout; };
 
-	rpi: require_prior_idle {
+	behaviors {
+		compatible = "zmk,behaviors";
+
+		rpi: require_prior_idle {
 		compatible = "zmk,behavior-hold-tap";
 		#binding-cells = <2>;
 		flavor = "tap-preferred";
@@ -42,6 +45,7 @@
 		quick-tap-ms = <200>;
 		require-prior-idle-ms = <125>;
 		bindings = <&kp>, <&kp>;
+	};	
 	};
 
 	combos {
@@ -181,7 +185,7 @@
 	};
 
 	FUNC {
-	display-name = "FUNCTION";
+	display-name = "FUNC";
 	bindings	= <
 	&kp F12			&kp F7			&kp F8	 		&kp F9	 		&kp PSCRN				&sys_reset		&to BASE		&trans			&trans			&bootloader
 	&kp F11			&kp F4			&kp F5	 		&kp F6	 		&kp SLCK	 			&trans			&kp LSHFT		&kp LCTRL	 	&kp LALT		&kp LGUI
