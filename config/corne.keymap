@@ -129,7 +129,7 @@
 	bindings	= <
 	&kp Q			&kp W			&kp F			&kp P			&kp B					&kp J			&kp L			&kp U			&kp Y			&kp SQT
 	&kp A			&kp R			&kp S			&kp T			&kp G	 				&kp M			&kp N			&kp E			&kp I			&kp O
-	&kp Z	 		&kp X	 		&kp C	 		&kp D			&kp V	 				&kp K			&kp H	 		&kp COMMA		&kp DOT	 		&kp SLASH
+	&kp Z	 		&kp X	 		&kp C	 		&kp D			&kp V	 				&kp K			&kp H	 		&kp COMMA		&kp DOT	 		&kp <SLASH
 									&lt MEDIA ESC	&lt NAV	TAB		&lt QWERTY SPACE		&lt SYMBOL BSPC	&lt NUMBER RET	&lt FUNC DEL
 	>;
 	};
@@ -157,7 +157,7 @@
 	MEDIA {
 	display-name = "MEDIA";
 	bindings	= <
-	&bootloader	 	&trans			&trans			&to BASE	 	&sys_reset				&trans	 		&trans			&trans			&trans			&trans
+	&bootloader	 	&trans			&soft_off		&to BASE	 	&sys_reset				&trans		 	&trans			&trans			&trans			&trans
 	&kp LGUI		&kp LALT		&kp LCTRL		&kp LSHFT		&trans					&ext_power EP_TOG	&kp C_PREV	&kp C_VOL_DN	&kp C_VOL_UP	&kp C_NEXT
 	&studio_unlock	&kp RALT		&to FUNC		&to MEDIA		&trans					&out OUT_TOG	&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3
 									&trans			&trans			&trans					&kp C_STOP	 	&kp C_PP		&kp C_MUTE
@@ -187,7 +187,7 @@
 	FUNC {
 	display-name = "FUNC";
 	bindings	= <
-	&kp F12			&kp F7			&kp F8	 		&kp F9	 		&kp PSCRN				&sys_reset		&to BASE		&trans			&trans			&bootloader
+	&kp F12			&kp F7			&kp F8	 		&kp F9	 		&kp PSCRN				&sys_reset		&to BASE		&soft_off		&trans			&bootloader
 	&kp F11			&kp F4			&kp F5	 		&kp F6	 		&kp SLCK	 			&trans			&kp LSHFT		&kp LCTRL	 	&kp LALT		&kp LGUI
 	&kp F10			&kp F1			&kp F2	 		&kp F3	 		&kp PAUSE_BREAK			&trans			&to FUNC	 	&to MEDIA		&kp RALT		&trans
 	 								&kp K_APP		&kp TAB			&kp SPACE				&trans			&trans	 		&trans
